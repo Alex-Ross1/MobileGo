@@ -1,0 +1,86 @@
+[gd_scene load_steps=4 format=3 uid="uid://bmskxyknu3x7l"]
+
+[ext_resource type="Theme" uid="uid://vgms07hjrnno" path="res://ButtonText.tres" id="1_3odr3"]
+[ext_resource type="Script" path="res://BasicBattle.gd" id="1_dh2f5"]
+[ext_resource type="Theme" uid="uid://coq652mrvlwi8" path="res://Grid.tres" id="2_tyn2p"]
+
+[node name="BattleBase" type="Node2D"]
+script = ExtResource("1_dh2f5")
+
+[node name="EnemyCD" type="Timer" parent="."]
+
+[node name="AllyCD" type="Timer" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1080.0
+offset_bottom = 1920.0
+
+[node name="Run" type="Button" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 833.0
+offset_top = 75.0
+offset_right = 1025.0
+offset_bottom = 196.0
+theme = ExtResource("1_3odr3")
+text = "Run"
+
+[node name="Switch" type="Button" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 75.0
+offset_right = 264.0
+offset_bottom = 196.0
+theme = ExtResource("1_3odr3")
+text = "Switch"
+
+[node name="EnemyHPBar" type="TextureProgressBar" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 149.0
+offset_right = 546.0
+offset_bottom = 212.0
+
+[node name="HPBar" type="TextureProgressBar" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 1200.0
+offset_right = 546.0
+offset_bottom = 1263.0
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 1372.0
+offset_right = 1041.0
+offset_bottom = 1911.0
+theme = ExtResource("2_tyn2p")
+columns = 2
+
+[node name="Move1" type="Button" parent="CanvasLayer/Control/GridContainer"]
+custom_minimum_size = Vector2(250, 200)
+layout_mode = 2
+theme = ExtResource("1_3odr3")
+text = "Move 1"
+expand_icon = true
+
+[node name="Move2" type="Button" parent="CanvasLayer/Control/GridContainer"]
+custom_minimum_size = Vector2(450, 200)
+layout_mode = 2
+theme = ExtResource("1_3odr3")
+text = "Move 2"
+
+[node name="Move3" type="Button" parent="CanvasLayer/Control/GridContainer"]
+custom_minimum_size = Vector2(450, 200)
+layout_mode = 2
+theme = ExtResource("1_3odr3")
+text = "Move 3"
+
+[node name="Move4" type="Button" parent="CanvasLayer/Control/GridContainer"]
+custom_minimum_size = Vector2(450, 200)
+layout_mode = 2
+theme = ExtResource("1_3odr3")
+text = "Move 4"

@@ -1,0 +1,6 @@
+[gd_resource type="Theme" format=3 uid="uid://coq652mrvlwi8"]
+
+[resource]
+default_base_scale = 1.05
+GridContainer/constants/h_separation = 100
+GridContainer/constants/v_separation = 50
